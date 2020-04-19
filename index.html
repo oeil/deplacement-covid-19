@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <title>Lien - Attestation de déplacement</title>
     <link rel="icon" type="image/png" href="favicon.png">
 
@@ -24,7 +25,7 @@
 
 <body>
     <div class="container">
-        <div class="col-md-10 mx-auto text-center">
+        <div class="col-sm-10 text-center">
             <div class="header-title">
                 <h1>
                     Attestation de déplacement automatisée
@@ -36,9 +37,9 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12 mx-auto">
+            <div class="col-sm-10 mx-auto">
 
-                <p class="info mt-3">
+                <p class="text-i mt-3 text-center">
                     Cette page crée un lien permanent qui redirige vers le site <a href="https://media.interieur.gouv.fr/deplacement-covid-19/" target="_blank">officiel du gouvernement</a> en fournissant vos information pré-remplies à chaque click - date et heure mise à jour
                 </p>
 
@@ -46,10 +47,13 @@
                     <i class="fas fa-exclamation-triangle warn-text"></i> Aucune information n’est collectée ni conservée - <a href="#footer">Projet 100% Open Source</a>
                 </p>
 
-                <h2>
+                <p class="info">
                     <i class="fab fa-apple fa-fw"></i> Utilisez Raccourcis et Siri pour générer votre attestation avec le lien.
                     <br>
                     <i class="fab fa-android fa-fw" style="color: rgb(28, 182, 28);"></i> Ajoutez le lien sur votre écran d'accueil pour générer votre attestation.
+                </p>
+                <h2>
+                    
                 </h2>
 
                 <div class="myform form">
@@ -57,55 +61,55 @@
 
                         <div class="form-group">
                             <div class="form-label">Prénom</div>
-                            <input type="text" id="first-name" name="firstname" class="form-control my-input"
+                            <input type="text" id="first-name" name="firstname" class="form-control form-control-lg my-input"
                                 autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label"
                                 required="" autofocus="">
                         </div>
 
                         <div class="form-group">
                             <div class="form-label">Nom</div>
-                            <input type="text" id="last-name" name="lastname" class="form-control my-input"
+                            <input type="text" id="last-name" name="lastname" class="form-control form-control-lg my-input"
                                 autocomplete="family-name" placeholder="Dupont" aria-labelledby="field-lastname-label"
                                 required="" autofocus="">
                         </div>
 
                         <div class="form-group">
-                            <div class="form-label">Date de Naissance</div>
-                            <input type="text" inputmode="numeric" id="birthdate" name="birthday"
-                                class="form-control my-input" autocomplete="bday" placeholder="01/01/1970"
+                            <div class="form-label">Date de Naissance (au format jj/mm/aaaa)</div>
+                            <input type="text" inputmode="text" pattern="\d{1,2}/\d{1,2}/\d{4}" id="birthdate" name="birthday"
+                                class="form-control form-control-lg my-input" autocomplete="bday" placeholder="01/01/1970"
                                 maxlength="10" aria-labelledby="field-birthday-label" required="">
                         </div>
 
                         <div class="form-group">
                             <div class="form-label">Lieu de Naissance</div>
-                            <input type="text" id="birth-place" name="lieunaissance" class="form-control my-input"
+                            <input type="text" id="birth-place" name="lieunaissance" class="form-control form-control-lg my-input"
                                 aria-labelledby="field-lieunaissance-label" placeholder="Lyon" required="">
                         </div>
 
                         <div class="form-group">
                             <div class="form-label">Adresse</div>
                             <input type="text" id="address" name="address" autocomplete="address-line1"
-                                class="form-control my-input" aria-labelledby="field-address-label"
+                                class="form-control form-control-lg my-input" aria-labelledby="field-address-label"
                                 placeholder="999 avenue de france" required="">
                         </div>
 
                         <div class="form-group">
                             <div class="form-label">Ville</div>
                             <input type="text" id="city" name="town" autocomplete="address-level1"
-                                class="form-control my-input" aria-labelledby="field-town-label" placeholder="Paris"
+                                class="form-control form-control-lg my-input" aria-labelledby="field-town-label" placeholder="Paris"
                                 required="">
                         </div>
 
                         <div class="form-group">
                             <div class="form-label">Code Postal</div>
                             <input type="number" min="00000" max="99999" id="post-code" name="post-code"
-                                class="form-control my-input" autocomplete="zipcode" minlength="4" maxlength="5"
+                                class="form-control form-control-lg my-input" autocomplete="zipcode" minlength="4" maxlength="5"
                                 aria-labelledby="field-zipcode-label" placeholder="75001" required="">
                         </div>
 
                         <div class="form-group">
                             <div class="form-label">Motif de déplacement</div>
-                            <select id="motive" name="motive" class="form-control">
+                            <select id="motive" name="motive" class="form-control form-control-lg">
                                 <option class="hidden" selected disabled>Sélectionnez une raison...</option>
                                 <option value="work">Travail</option>
                                 <option value="sport">Déplacement Bref (Sport)</option>
@@ -119,18 +123,13 @@
 
                         <div class="button-div">
                             <div class="form-group">
-                                <input type="submit" value="Créer lien" class="btn btn-block b-button">
+                                <input type="submit" value="Créer lien" class="btn b-button">
                             </div>
                         </div>
 
                     </form>
 
                 </div>
-
-                
-                <p class="info mt-3 text-right">
-                    
-                </p>
 
                 <div id="div-url-generate" class="link-area mx-auto">
                     <div id="generation-link" class="link-url">
