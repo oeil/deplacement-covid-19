@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Create link</title>
+    <title>Lien - Attestation de déplacement</title>
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <div>
-        Hello, you will create your link :
+        Bonjour, remplissez le formulaire ci-dessous pour créer un lien :
+        
         <form id="form-profile">
-            firstname
+        </br>
+            Prénom
             <input type="text" id="first-name" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
             </br>
-            lastname
+            Nom
             <input type="text" id="last-name" name="lastname" autocomplete="family-name" placeholder="Dupont" aria-labelledby="field-lastname-label" required="" autofocus="">
             </br>
-            birthday
+            </br>
+            Date de Naissance
             <input type="text" inputmode="numeric" id="birthdate" name="birthday" autocomplete="bday" placeholder="01/01/1970" maxlength="10" aria-labelledby="field-birthday-label" required="">
             </br>
-            lieunaissance
+            Lieu de Naissance
             <input type="text" id="birth-place" name="lieunaissance" aria-labelledby="field-lieunaissance-label" placeholder="Lyon" required="">
             </br>
-            address
+            </br>
+            Address
             <input type="text" id="address" name="address" autocomplete="address-line1" aria-labelledby="field-address-label" placeholder="999 avenue de france" required="">
             </br>
-            town
+            Ville
             <input type="text" id="city" name="town" autocomplete="address-level1" aria-labelledby="field-town-label" placeholder="Paris" required="">
             </br>
-            zipcode
+            Code Postal
             <input type="number" min="00000" max="99999" id="post-code" name="post-code" autocomplete="zipcode" minlength="4" maxlength="5" aria-labelledby="field-zipcode-label" placeholder="75001" required="">
-            </br></br></br>
-
-            REASON </br>
+            </br></br>
+            Motif de déplacement </br>
             <select id="motive" name="motive">
                 <option value="0">Sélectionnez une raison...</option>
                 <option value="work">Travail</option>
-                <option value="sport">Sport</option>
+                <option value="sport">Déplacement Bref (Sport)</option>
                 <option value="buy">Courses</option>
                 <option value="health">Santé</option>
                 <option value="family">Famille</option>
@@ -43,8 +46,11 @@
                 <option value="mission">Mission d’intérêt général</option>
             </select>
         </form>
+        </br>
         <button onclick="refreshData()">Valider</button>
+        </br>
         <div id="generation-link">
+        </br>
             <a href="generate.html"></a>
         </div>
     </div>
