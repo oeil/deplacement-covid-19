@@ -29,3 +29,18 @@ function serialize(obj) {
         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
     return str.join("&");
 }
+
+function formSubmit(evt) {
+    evt.preventDefault();
+    refreshData();
+    document.getElementById('div-url-generate').style.display = 'block';
+}
+
+setTimeout(function () {
+    $(document).unbind('submit');
+    $(document).off('submit');
+    document.addEventListener('submit', formSubmit, {capture:true});
+}, 2000)
+
+document.getElementById('div-url-generate').style.display = 'none';
+document.getElementById('generation-link').style.overflowWrap = "break-word";

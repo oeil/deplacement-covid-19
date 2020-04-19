@@ -1,59 +1,156 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Lien - Attestation de déplacement</title>
     <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link href="main.css" rel="stylesheet" id="main-css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div>
-        Bonjour, remplissez le formulaire ci-dessous pour créer un lien :
-        
-        <form id="form-profile">
-        </br>
-            Prénom
-            <input type="text" id="first-name" name="firstname" autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label" required="" autofocus="">
-            </br>
-            Nom
-            <input type="text" id="last-name" name="lastname" autocomplete="family-name" placeholder="Dupont" aria-labelledby="field-lastname-label" required="" autofocus="">
-            </br>
-            </br>
-            Date de Naissance
-            <input type="text" inputmode="numeric" id="birthdate" name="birthday" autocomplete="bday" placeholder="01/01/1970" maxlength="10" aria-labelledby="field-birthday-label" required="">
-            </br>
-            Lieu de Naissance
-            <input type="text" id="birth-place" name="lieunaissance" aria-labelledby="field-lieunaissance-label" placeholder="Lyon" required="">
-            </br>
-            </br>
-            Address
-            <input type="text" id="address" name="address" autocomplete="address-line1" aria-labelledby="field-address-label" placeholder="999 avenue de france" required="">
-            </br>
-            Ville
-            <input type="text" id="city" name="town" autocomplete="address-level1" aria-labelledby="field-town-label" placeholder="Paris" required="">
-            </br>
-            Code Postal
-            <input type="number" min="00000" max="99999" id="post-code" name="post-code" autocomplete="zipcode" minlength="4" maxlength="5" aria-labelledby="field-zipcode-label" placeholder="75001" required="">
-            </br></br>
-            Motif de déplacement </br>
-            <select id="motive" name="motive">
-                <option value="0">Sélectionnez une raison...</option>
-                <option value="work">Travail</option>
-                <option value="sport">Déplacement Bref (Sport)</option>
-                <option value="buy">Courses</option>
-                <option value="health">Santé</option>
-                <option value="family">Famille</option>
-                <option value="sport">Judiciaire</option>
-                <option value="mission">Mission d’intérêt général</option>
-            </select>
-        </form>
-        </br>
-        <button onclick="refreshData()">Valider</button>
-        </br>
-        <div id="generation-link">
-        </br>
-            <a href="generate.html"></a>
+    <div class="container">
+        <div class="col-md-10 mx-auto text-center">
+            <div class="header-title">
+                <h1>
+                    Attestation de déplacement automatisée
+                </h1>
+                <h2>
+                    Fatigué de remplir manuellement le formulaire à chaque sortie?
+                </h2>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+
+                <p class="info mt-3">
+                    Cette page crée un lien permanent qui redirige vers le site <a href="https://media.interieur.gouv.fr/deplacement-covid-19/" target="_blank">officiel du gouvernement</a> en fournissant vos information pré-remplies à chaque click - date et heure mise à jour
+                </p>
+
+                <p class="info mt-3 text-center">
+                    <i class="fas fa-exclamation-triangle warn-text"></i> Aucune information n’est collectée ni conservée - <a href="#footer">Projet 100% Open Source</a>
+                </p>
+
+                <h2>
+                    <i class="fab fa-apple fa-fw"></i> Utilisez Raccourcis et Siri pour générer votre attestation avec le lien.
+                    <br>
+                    <i class="fab fa-android fa-fw" style="color: rgb(28, 182, 28);"></i> Ajoutez le lien sur votre écran d'accueil pour générer votre attestation.
+                </h2>
+
+                <div class="myform form">
+                    <form id="form-profile">
+
+                        <div class="form-group">
+                            <div class="form-label">Prénom</div>
+                            <input type="text" id="first-name" name="firstname" class="form-control my-input"
+                                autocomplete="given-name" placeholder="Jean" aria-labelledby="field-firstname-label"
+                                required="" autofocus="">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label">Nom</div>
+                            <input type="text" id="last-name" name="lastname" class="form-control my-input"
+                                autocomplete="family-name" placeholder="Dupont" aria-labelledby="field-lastname-label"
+                                required="" autofocus="">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label">Date de Naissance</div>
+                            <input type="text" inputmode="numeric" id="birthdate" name="birthday"
+                                class="form-control my-input" autocomplete="bday" placeholder="01/01/1970"
+                                maxlength="10" aria-labelledby="field-birthday-label" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label">Lieu de Naissance</div>
+                            <input type="text" id="birth-place" name="lieunaissance" class="form-control my-input"
+                                aria-labelledby="field-lieunaissance-label" placeholder="Lyon" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label">Adresse</div>
+                            <input type="text" id="address" name="address" autocomplete="address-line1"
+                                class="form-control my-input" aria-labelledby="field-address-label"
+                                placeholder="999 avenue de france" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label">Ville</div>
+                            <input type="text" id="city" name="town" autocomplete="address-level1"
+                                class="form-control my-input" aria-labelledby="field-town-label" placeholder="Paris"
+                                required="">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label">Code Postal</div>
+                            <input type="number" min="00000" max="99999" id="post-code" name="post-code"
+                                class="form-control my-input" autocomplete="zipcode" minlength="4" maxlength="5"
+                                aria-labelledby="field-zipcode-label" placeholder="75001" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-label">Motif de déplacement</div>
+                            <select id="motive" name="motive" class="form-control">
+                                <option class="hidden" selected disabled>Sélectionnez une raison...</option>
+                                <option value="work">Travail</option>
+                                <option value="sport">Déplacement Bref (Sport)</option>
+                                <option value="buy">Courses</option>
+                                <option value="health">Santé</option>
+                                <option value="family">Famille</option>
+                                <option value="sport">Judiciaire</option>
+                                <option value="mission">Mission d’intérêt général</option>
+                            </select>
+                        </div>
+
+                        <div class="button-div">
+                            <div class="form-group">
+                                <input type="submit" value="Créer lien" class="btn btn-block b-button">
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                
+                <p class="info mt-3 text-right">
+                    
+                </p>
+
+                <div id="div-url-generate" class="link-area mx-auto">
+                    <div id="generation-link" class="link-url">
+                        <a href="generate.html"></a>
+                    </div>
+                </div>
+
+                <p id="footer" class="footer text-center">Cet page ne collecte ni n'enregistre vos données personnelle.
+                    <br>
+                    <a href="https://github.com/oeil/deplacement-covid-19" target="_blank">Projet Open-Source</a> - Site web hebergé sur Github Pages <a href="https://github.com/oeil/deplacement-covid-19/tree/gh-pages"target="_blank">ici</a>.
+                    <br><br>
+                    Créé avec <i class="fas fa-heart"></i> à Nancy
+                </p>
+            </div>
+        </div>
+
+
+
     </div>
 </body>
 <script src="index.js"></script>
+
 </html>
