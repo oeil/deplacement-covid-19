@@ -1,4 +1,4 @@
-[ [English Verion](README-EN.md) ]
+[ [English Version](README-EN.md) ]
 
 ⚠️ Par respect des équipes médicales, merci de respecter la distanciation sociale, les règles du gouvernement ainsi que les gestes barrières.
 
