@@ -28,10 +28,17 @@
     text-align: left;
 }
 
+.text-i {
+    font-family: 'Avenir Light',sans-serif;
+    color: #959eb5;
+    font-size: smaller;
+    line-height: 20px;
+}
+
 .info {
     font-family: 'Avenir Light',sans-serif;
     color: #959eb5;
-    font-size: 14px;
+    font-size: x-small;
     line-height: 20px;
 }
 
@@ -40,7 +47,7 @@
     margin-bottom: 24px;
     font-family: 'Avenir Light',sans-serif;
     color: #959eb5;
-    font-size: 14px;
+    font-size: x-small;
     line-height: 20px;
 }
 
@@ -67,7 +74,8 @@ input[type=number]::-webkit-inner-spin-button,
     width: 100%;
     font-weight: 600;
     color: #fff;
-    padding: 8px 25px;
+    padding: 8px 45px;
+    font-size: x-large;
 }
 
 .button-div {
