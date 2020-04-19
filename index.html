@@ -25,7 +25,7 @@
 
 <body>
     <div class="container">
-        <div class="col-sm-10 text-center">
+        <div class="col-sm-12 text-center">
             <div class="header-title">
                 <h1>
                     Attestation de déplacement automatisée
@@ -39,13 +39,15 @@
         <div class="row">
             <div class="col-sm-10 mx-auto">
 
-                <p class="text-i mt-3 text-center">
-                    Cette page crée un lien permanent qui redirige vers le site <a href="https://media.interieur.gouv.fr/deplacement-covid-19/" target="_blank">officiel du gouvernement</a> en fournissant vos information pré-remplies à chaque click - date et heure mise à jour
-                </p>
-
-                <p class="info mt-3 text-center">
-                    <i class="fas fa-exclamation-triangle warn-text"></i> Aucune information n’est collectée ni conservée - <a href="#footer">Projet 100% Open Source</a>
-                </p>
+                <div class="link-area">
+                    <p class="text-i text-justify">
+                        Cette page crée un lien permanent qui redirige vers le site <a href="https://media.interieur.gouv.fr/deplacement-covid-19/" target="_blank">officiel du gouvernement</a> en fournissant vos information pré-remplies à chaque click, date et heure mise à jour automatiquement.
+                    </p>
+    
+                    <p class="info mt-3 text-center">
+                        <i class="fas fa-exclamation-triangle warn-text"></i> Aucune information n’est collectée ni conservée <i class="fas fa-exclamation-triangle warn-text"></i>
+                    </p>
+                </div>
 
                 <p class="info">
                     <i class="fab fa-apple fa-fw"></i> Utilisez Raccourcis et Siri pour générer votre attestation avec le lien.
@@ -132,6 +134,7 @@
                 </div>
 
                 <div id="div-url-generate" class="link-area mx-auto">
+                    <div class="link-header">Copier votre lien de génération automatique d'attestation de déplacement:</div>
                     <div id="generation-link" class="link-url">
                         <a href="generate.html"></a>
                     </div>

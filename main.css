@@ -1,13 +1,19 @@
 .link-area {
     overflow: hidden;
-    margin: 40px 0 40px;
-    padding: 24px;
+    margin: 20px 0 20px;
+    padding: 12px;
     border: 0 transparent;
     border-radius: 4px;
     /*background-color: #e3f0fe;*/
     background-color: #e3f0fe;
     -o-object-fit: fill;
     object-fit: fill;
+}
+
+.link-header {
+    margin-bottom: 5px;
+    font-family: 'Avenir Roman',sans-serif;
+    color: #959eb5;
 }
 
 .warn-text {
