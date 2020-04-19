@@ -19,8 +19,8 @@ function refreshData() {
         z: zipcode,
         r: reason
     }
-    document.querySelector("#generation-link > a").href = window.location.origin + "/covid19-certificate/generate.html#" + serialize(data);
-    document.querySelector("#generation-link > a").innerText = window.location.origin + "/covid19-certificate/generate.html#" + serialize(data);
+    document.querySelector("#generation-link > a").href = window.location.origin + "/deplacement-covid-19/generate.html#" + serialize(data);
+    document.querySelector("#generation-link > a").innerText = window.location.origin + "/deplacement-covid-19/generate.html#" + serialize(data);
 }
 
 function serialize(obj) {
