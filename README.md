@@ -24,6 +24,8 @@ Obtenir un lien permanent pour générer une attestation officielle au format PD
 Vous pouvez maintenant utiliser ce lien lorsque vous avez besoin de générer une attestation. Plus besoin de remplir le formulaire.
 
 ## Apple iOS utiliser Siri pour générer un PDF (Raccourcis)
+[![Alt text](imgs/youtube-preview.png)](https://www.youtube.com/watch?v=-MU__w3lUo0)
+
 
 ## Credit
  * Source officiel du gouvernement Français utilisé pour `certificate.js`:
