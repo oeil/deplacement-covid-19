@@ -75,8 +75,6 @@ input[type=number]::-webkit-inner-spin-button,
 
 .b-button {
     color: #fff !important;
-    border: 1px solid #35a7ea;
-    background: #358cea !important;
     width: 100%;
     font-weight: 600;
     color: #fff;

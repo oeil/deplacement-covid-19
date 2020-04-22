@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <title>Lien - Attestation de déplacement</title>
+    <title>Attestation de déplacement automatisée</title>
     <link rel="icon" type="image/png" href="favicon.png">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -50,13 +50,25 @@
                 </div>
 
                 <p class="info">
-                    <i class="fab fa-apple fa-fw"></i> Utilisez Raccourcis et Siri pour générer votre attestation avec le lien.
+                    <i class="fab fa-apple fa-fw"></i> Utilisez <a href="https://www.youtube.com/watch?v=-MU__w3lUo0" target="_blank">Raccourcis et Siri</a> pour générer votre attestation avec le lien.
                     <br>
                     <i class="fab fa-android fa-fw" style="color: rgb(28, 182, 28);"></i> Ajoutez le lien sur votre écran d'accueil pour générer votre attestation.
                 </p>
-                <h2>
-                    
-                </h2>
+                
+                <p class="text-right">
+                    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fas fa-question-circle"></i> Aide</a>
+                </p>
+                <div id="multiCollapseExample1" class="collapse multi-collapse link-area mx-auto">
+                    <div class="text-i text-justify">Petite video explicative pour créer son lien permanent et configurer Siri sur iPhone pour générer son PDF à la demande:</div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" 
+                                src="https://www.youtube.com/embed/-MU__w3lUo0" 
+                                frameborder="0" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="link-header text-justify"></div>
+                </div>
 
                 <div class="myform form">
                     <form id="form-profile">
@@ -125,7 +137,7 @@
 
                         <div class="button-div">
                             <div class="form-group">
-                                <input type="submit" value="Créer lien" class="btn b-button">
+                                <input type="submit" value="Créer lien" class="btn btn-primary b-button">
                             </div>
                         </div>
 
@@ -133,8 +145,12 @@
 
                 </div>
 
+                
+
                 <div id="div-url-generate" class="link-area mx-auto">
-                    <div class="link-header">Copiez votre lien de génération automatique d'attestation de déplacement:</div>
+                    <div class="text-center" style="font-size: 50px;"><i class="fas fa-check-circle" style="color: rgb(28, 182, 28);"></i></div>
+                    <div class="link-header text-justify">Copiez votre lien de génération automatique d'attestation de déplacement ci-dessous. Utilisez ce lien à chaque fois que vous souhaitez une nouvelle attestation:</div>
+                    <br>
                     <div id="generation-link" class="link-url">
                         <a href="generate.html"></a>
                     </div>
@@ -143,6 +159,7 @@
                 <p id="footer" class="footer text-center">Cet page ne collecte ni n'enregistre vos données personnelle.
                     <br>
                     <a href="https://github.com/oeil/deplacement-covid-19" target="_blank">Projet Open-Source</a> - Site web hebergé sur Github Pages <a href="https://github.com/oeil/deplacement-covid-19/tree/gh-pages"target="_blank">ici</a>.
+                    <br>Icons made by <a href="https://www.flaticon.com/authors/itim2101" title="itim2101">itim2101</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
                     <br><br>
                     Créé avec <i class="fas fa-heart"></i> à Nancy
                 </p>
