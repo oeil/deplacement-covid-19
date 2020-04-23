@@ -19,11 +19,8 @@ function refreshData() {
         z: zipcode,
         r: reason
     }
-    
-    const urlParams = new URLSearchParams(window.location.search);
-    const isBeta = urlParams.has('beta');
 
-    var url = "/deplacement-covid-19/generate.html" + (isBeta ? "?beta" : "") +"#";
+    var url = "/deplacement-covid-19/generate.html#" //+ (isBeta ? "?beta" : "") +"#";
     document.querySelector("#generation-link > a").href = window.location.origin + url + serialize(data);
     document.querySelector("#generation-link > a").innerText = window.location.origin + url + serialize(data);
 }

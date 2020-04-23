@@ -1,10 +1,4 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    const isBeta = new URLSearchParams(window.location.search).urlParams.has('beta');
-
-    if (!isBeta) {
-        document.getElementById("beta").style.display = "none";
-    }
-
     var data = window.location.hash.substr(1);
     if(!data){
         // Stay compatible with previous version search param
