@@ -1,6 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const isBeta = urlParams.has('beta');
+    const isBeta = new URLSearchParams(window.location.search).urlParams.has('beta');
 
     if (!isBeta) {
         document.getElementById("beta").style.display = "none";
