@@ -1,0 +1,21 @@
+body {
+    font-family: 'Avenir Heavy',sans-serif;
+}
+
+.dwld-success .swal2-container.swal2-backdrop-show {
+    background: #358cea;
+}
+
+.dwld-success .swal2-title {
+    font-size: 1.75em;
+}
+.dwld-success .swal2-content {
+    font-size: 0.8em;
+    color: #cacaca;
+}
+
+.dwld-success .swal2-footer {
+    margin: 2.25em 0 0;
+    font-size: 0.6em;
+    text-align: center;
+}
