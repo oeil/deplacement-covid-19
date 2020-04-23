@@ -1,7 +1,3 @@
-browser.downloads.onChanged.addListener((event) => {
-    
-});
-
 window.addEventListener("DOMContentLoaded", (event) => {
     const urlParams = new URLSearchParams(window.location.search);
     const isBeta = urlParams.has('beta');
