@@ -1,9 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
     var data = window.location.hash.substr(1);
-    if(!data){
-        // Stay compatible with previous version search param
-        data = window.location.search;
-    }
     const urlParams = new URLSearchParams(data);
 
     document.getElementById("field-firstname").value = urlParams.get("f"); //firstname
@@ -21,6 +17,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("checkbox-sport").checked = (reason==='sport');
     document.getElementById("checkbox-judiciaire").checked = (reason==='legal');
     document.getElementById("checkbox-missions").checked = (reason==='mission');
-    document.getElementById("generate-btn").click()
-});
 
+    document.getElementById("generate-btn").click()
+    
+    //remove loading indicator
+    document.getElementById('loading-i').style.display = 'none';
+
+    Swal.fire({
+        icon: "success",
+        title: "Attestation Téléchargée",
+        text: "Fichier disponible dans votre répértoire de téléchargements",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        showConfirmButton: false,
+        footer: "*Ajouter cette page à vos favories ou écran d'accueil"
+    });
+});
