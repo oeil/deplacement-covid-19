@@ -20,6 +20,19 @@
     color: orange;
 }
 
+.nav-tabs {
+    border: none;
+}
+
+.help .nav-link.active {
+    border-color: white;
+}
+
+.tab-pane-help {
+    background-color: white;
+    padding: 5px;
+}
+
 .link-url {
     font-family: 'Avenir Heavy',sans-serif;
     color: #0042da;

@@ -20,8 +20,11 @@ Generate a permanent link to generate the official PDF document out of the Frenc
 
 Now you can use that link everytime you need to generate a certificate. You no longer need to fill in the form.
 
-## Apple iOS use Siri to generate the PDF (shortcut)
+## iPhone use Siri to generate the certificate PDF on demand (iOS Shortcuts)
 [![Alt text](imgs/youtube-preview.png)](https://www.youtube.com/watch?v=-MU__w3lUo0)
+
+## Android add a shortcut to home screen to generate the certificate PDF on demand
+[![Alt text](imgs/youtube-preview.png)](https://www.youtube.com/watch?v=n8qpyzSqi1s)
 
 ## How it works ?
 - The page `generate.html` is in charge of generating the PDF
