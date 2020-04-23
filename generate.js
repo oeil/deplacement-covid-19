@@ -1,4 +1,15 @@
+browser.downloads.onChanged.addListener((event) => {
+    
+});
+
 window.addEventListener("DOMContentLoaded", (event) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const isBeta = urlParams.has('beta');
+
+    if (!isBeta) {
+        document.getElementById("beta").style.display = "none";
+    }
+
     var data = window.location.hash.substr(1);
     if(!data){
         // Stay compatible with previous version search param

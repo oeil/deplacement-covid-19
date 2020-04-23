@@ -19,8 +19,13 @@ function refreshData() {
         z: zipcode,
         r: reason
     }
-    document.querySelector("#generation-link > a").href = window.location.origin + "/deplacement-covid-19/generate.html#" + serialize(data);
-    document.querySelector("#generation-link > a").innerText = window.location.origin + "/deplacement-covid-19/generate.html#" + serialize(data);
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const isBeta = urlParams.has('beta');
+
+    var url = "/deplacement-covid-19/generate.html" + (isBeta ? "?beta" : "") +"#";
+    document.querySelector("#generation-link > a").href = window.location.origin + url + serialize(data);
+    document.querySelector("#generation-link > a").innerText = window.location.origin + url + serialize(data);
 }
 
 function serialize(obj) {
@@ -44,3 +49,4 @@ setTimeout(function () {
 
 document.getElementById('div-url-generate').style.display = 'none';
 document.getElementById('generation-link').style.overflowWrap = "break-word";
+
