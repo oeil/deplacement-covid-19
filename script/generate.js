@@ -20,6 +20,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("checkbox-convocation").checked = (reason==='convocation');
     document.getElementById("checkbox-missions").checked = (reason==='missions');
 
+    var now = new Date()
+    document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
+    document.getElementById('field-heuresortie').value = now.toLocaleString("fr-FR", {timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit", hour12: false});
+    
     document.getElementById("generate-btn").click()
     
     //remove loading indicator
