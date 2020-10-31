@@ -41,4 +41,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
         footer: "*Ajouter cette page à vos favories ou écran d'accueil"
     });
     */
+
+   function badScriptLoading(event) {
+    console.log("Official JS is not working. Patching using local copy.")
+    let script = document.createElement('script');
+    script.src = "deplacement-covid-19/main.d56e3230.js";
+    document.head.append(script)
+}
 });
