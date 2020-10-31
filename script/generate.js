@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
+    //v2.0
     var data = window.location.hash.substr(1);
     const urlParams = new URLSearchParams(data);
 
@@ -24,12 +25,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById('field-datesortie').value = now.toJSON().slice(0,10);
     document.getElementById('field-heuresortie').value = now.toLocaleString("fr-FR", {timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit", hour12: false});
     
-    setTimeout(() => {
-        document.getElementById("generate-btn").click()
-    }, 500)
+    document.getElementById("generate-btn").click()
     
     //remove loading indicator
-    /*
     document.getElementById('loading-i').style.display = 'none';
 
     Swal.fire({
@@ -42,12 +40,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
         showConfirmButton: false,
         footer: "*Ajouter cette page à vos favories ou écran d'accueil"
     });
-    */
-
-   function badScriptLoading(event) {
-    console.log("Official JS is not working. Patching using local copy.")
-    let script = document.createElement('script');
-    script.src = "main.d56e3230.js";
-    document.head.append(script)
-}
+    
 });
