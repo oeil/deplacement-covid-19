@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("generate-btn").click()
     
     //remove loading indicator
+    /*
     document.getElementById('loading-i').style.display = 'none';
 
     Swal.fire({
@@ -39,4 +40,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
         showConfirmButton: false,
         footer: "*Ajouter cette page à vos favories ou écran d'accueil"
     });
+    */
 });
