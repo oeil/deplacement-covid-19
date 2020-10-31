@@ -10,13 +10,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("field-town").value = urlParams.get("c"); //city
     document.getElementById("field-zipcode").value = urlParams.get("z"); //zipcode
     const reason = urlParams.get("r"); //reason
-    document.getElementById("checkbox-travail").checked = (reason==='work');
-    document.getElementById("checkbox-courses").checked = (reason==='buy');
-    document.getElementById("checkbox-sante").checked = (reason==='health');
-    document.getElementById("checkbox-famille").checked = (reason==='family');
-    document.getElementById("checkbox-sport").checked = (reason==='sport');
-    document.getElementById("checkbox-judiciaire").checked = (reason==='legal');
-    document.getElementById("checkbox-missions").checked = (reason==='mission');
+    document.getElementById("checkbox-travail").checked = (reason==='travail');
+    document.getElementById("checkbox-achats").checked = (reason==='achats');
+    document.getElementById("checkbox-enfants").checked = (reason==='enfants');
+    document.getElementById("checkbox-sport_animaux").checked = (reason==='sport_animaux');
+    document.getElementById("checkbox-sante").checked = (reason==='sante');
+    document.getElementById("checkbox-famille").checked = (reason==='famille');
+    document.getElementById("checkbox-handicap").checked = (reason==='handicap');
+    document.getElementById("checkbox-convocation").checked = (reason==='convocation');
+    document.getElementById("checkbox-missions").checked = (reason==='missions');
 
     document.getElementById("generate-btn").click()
     
